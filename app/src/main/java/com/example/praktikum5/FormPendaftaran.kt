@@ -37,4 +37,27 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
         stringResource(R.string.lajang),
         stringResource(R.string.duda)
     )
+
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFF9C27B0))
+                .padding(vertical = dimensionResource(R.dimen.padding_top)),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = stringResource(R.string.app_name),
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+        }
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
+
+    }
 }
