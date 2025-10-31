@@ -170,5 +170,29 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
             )
         )
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_medium)))
+
+        Button
+        onClick = {
+                nama = textNama
+                jenis = textJK
+                status = textStatus
+                alamat = textAlamat
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = dimensionResource(R.dimen.padding_large))
+                .height(dimensionResource(R.dimen.button_height)),
+            shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner)),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF6200EE)
+            )
+        ) {
+            Text(
+                text = stringResource(R.string.submit),
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
     }
 }
