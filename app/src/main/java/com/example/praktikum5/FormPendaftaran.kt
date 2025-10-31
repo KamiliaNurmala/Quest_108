@@ -59,5 +59,29 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
         }
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
 
+        Text(
+            text = stringResource(R.string.nama_lengkap),
+            fontSize = 12.sp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    start = dimensionResource(R.dimen.padding_large),
+                    bottom = dimensionResource(R.dimen.padding_small)
+                )
+        )
+        OutlinedTextField(
+            value = textNama,
+            onValueChange = { textNama = it },
+            placeholder = { Text(stringResource(R.string.isian_nama)) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = dimensionResource(R.dimen.padding_large)),
+            shape = RoundedCornerShape(dimensionResource(R.dimen.text_field_corner)),
+            colors = OutlinedTextFieldDefaults.colors(
+                unfocusedContainerColor = Color.White,
+                focusedContainerColor = Color.White
+            )
+        )
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
     }
 }
