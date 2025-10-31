@@ -171,8 +171,8 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_medium)))
 
-        Button
-        onClick = {
+        Button(
+            onClick = {
                 nama = textNama
                 jenis = textJK
                 status = textStatus
@@ -194,5 +194,41 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
             )
         }
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
+
+        if (nama.isNotEmpty() || jenis.isNotEmpty() || alamat.isNotEmpty()) {
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = dimensionResource(R.dimen.padding_large)),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.Black
+                )
+            ) {
+                Column(
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
+                ) {
+                    Text(
+                        text = "${stringResource(R.string.label_nama)} $nama",
+                        color = Color.White,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = "${stringResource(R.string.label_gender)} $jenis",
+                        color = Color.White,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = "${stringResource(R.string.label_status)} $status",
+                        color = Color.White,
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = "${stringResource(R.string.label_alamat_display)} $alamat",
+                        color = Color.White,
+                        fontSize = 14.sp
+                    )
+                }
+            }
+        }
     }
 }
