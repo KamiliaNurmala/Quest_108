@@ -12,4 +12,9 @@
     <string name="janda">Janda</string>
     <string name="lajang">Lajang</string>
     <string name="duda">Duda</string>
+
+    <string name="label_nama">Nama :</string>
+    <string name="label_gender">Gender :</string>
+    <string name="label_status">Status :</string>
+    <string name="label_alamat_display">Alamat :</string>
 </resources>
