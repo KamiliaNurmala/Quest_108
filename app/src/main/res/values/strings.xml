@@ -5,4 +5,11 @@
     <string name="jenis_kelamin">JENIS KELAMIN</string>
     <string name="status_perkawinan">STATUS PERKAWINAN</string>
     <string name="alamat">ALAMAT</string>
+    <string name="isian_nama">Isian nama lengkap</string>
+    <string name="placeholder_alamat">Alamat</string>
+    <string name="laki_laki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="janda">Janda</string>
+    <string name="lajang">Lajang</string>
+    <string name="duda">Duda</string>
 </resources>
