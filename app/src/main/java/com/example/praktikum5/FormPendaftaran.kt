@@ -114,5 +114,36 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
             }
         }
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
+
+        Text(
+            text = stringResource(R.string.status_perkawinan),
+            fontSize = 12.sp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    start = dimensionResource(R.dimen.padding_large),
+                    bottom = dimensionResource(R.dimen.padding_small)
+                )
+        )
+        Column(modifier = Modifier.padding(horizontal = dimensionResource(R.dimen.padding_large))) {
+            statusPerkawinan.forEach { item ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .selectable(
+                            selected = textStatus == item,
+                            onClick = { textStatus = item }
+                        ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = textStatus == item,
+                        onClick = { textStatus = item }
+                    )
+                    Text(text = item)
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
     }
 }
