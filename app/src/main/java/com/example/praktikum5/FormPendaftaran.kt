@@ -145,5 +145,30 @@ fun FormulirPendaftaran(modifier: Modifier = Modifier) {
             }
         }
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_top)))
+
+        Text(
+            text = stringResource(R.string.alamat),
+            fontSize = 12.sp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    start = dimensionResource(R.dimen.padding_large),
+                    bottom = dimensionResource(R.dimen.padding_small)
+                )
+        )
+        OutlinedTextField(
+            value = textAlamat,
+            onValueChange = { textAlamat = it },
+            placeholder = { Text(stringResource(R.string.placeholder_alamat)) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = dimensionResource(R.dimen.padding_large)),
+            shape = RoundedCornerShape(dimensionResource(R.dimen.text_field_corner)),
+            colors = OutlinedTextFieldDefaults.colors(
+                unfocusedContainerColor = Color.White,
+                focusedContainerColor = Color.White
+            )
+        )
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_medium)))
     }
 }
