@@ -5,4 +5,7 @@
     <dimen name="padding_large">40dp</dimen>
     <dimen name="padding_top">20dp</dimen>
     <dimen name="button_height">50dp</dimen>
+    <dimen name="button_corner">25dp</dimen>
+    <dimen name="text_field_corner">8dp</dimen>
+    <dimen name="divider_tipis">1dp</dimen>
 </resources>
